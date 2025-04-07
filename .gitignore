@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.vscode/
+.venv/
+*.env
+example_mcp_server.py
+example2-3.py
+talk2mcp-2.py
