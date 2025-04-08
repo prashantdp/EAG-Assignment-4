@@ -133,36 +133,6 @@ async def main():
                 Begin!
                 """
 
-#                 system_prompt = f"""You are an agent controlling Apple Keynote on macOS. You have access to tools to interact with Keynote.
-
-# Available tools:
-# {tools_description_str}
-
-# Your goal is to follow the user's request step-by-step.
-# You MUST respond with EXACTLY ONE line in one of these formats (no additional text, explanations, or markdown formatting):
-
-# 1.  To call a function:
-#     FUNCTION_CALL: function_name|param1|param2|...
-#     - Parameters MUST be in the correct order specified in the tool description.
-#     - For text parameters containing special characters or spaces, ensure they are correctly represented (the client will handle quoting if necessary).
-#     - For coordinates and sizes, provide integer numbers.
-#     - For fuctions with no parameters, STRICTLY call function with function_names
-
-# 2.  When the entire user request is fully completed:
-#     FINAL_ANSWER: Task completed successfully.
-
-# Important Rules:
-# - Call tools sequentially as needed to fulfill the request.
-# - Check the results of previous calls (provided in the history) before deciding the next step.
-# - ONLY output `FINAL_ANSWER:` when *all* steps requested by the user are finished.
-# - If a tool fails, report it using `FINAL_ANSWER: Task failed. Error: [error message from history]`.
-# - Do not imagine tools that are not listed. Call `open_keynote` first if Keynote isn't open. Call `create_blank_keynote_slide` before drawing or adding text if you're not sure a usable slide exists.
-
-# Example Call:
-# FUNCTION_CALL: draw_keynote_rectangle|100|150|300|200
-# FUNCTION_CALL: add_text_in_keynote|Hello World!|120|170|260|50
-
-# Begin!"""
 
                 # Define the user's overall request
                 user_query = "Please open Keynote, create a blank slide, draw a rectangle from (150, 150) with width 500 and height 300, and then add the text 'Agent Calling MCP tools' in center aligned inside the rectangle "
